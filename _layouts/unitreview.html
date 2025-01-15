@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Society of Monash Electrical Engineers</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<style>
+			p {
+				margin: 0 0 0.5em 0;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="/index.html">SMEE</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="/index.html">Home</a></li>
+								<li><a href="/sponsors.html">Sponsors</a></li>
+								<li><a href="/contactus.html">Contact Us</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+					
+				<!-- Content -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>{{ page.code }} {{ page.title }}</h2>
+								<p>Updated after {{ page.semester }}</p>
+							</div>
+						</header>
+						<section class="wrapper alt style3">
+							<div class="inner">
+								<ul class="alt">
+									<li>
+										<p>
+											<b>Difficulty:</b>
+											{% for star in (1..page.difficulty) %}
+												X
+											{% endfor %}
+											{% for hole in (page.difficulty..4) %}
+												O
+											{% endfor %}
+										</p>
+										<p><b>Prerequisites:</b> {{ page.prerequisites }}</p>
+									</li>
+									<li>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<p><b>Mean Setu Score:</b> {{ page.setumean}}</p>
+											</div>
+											<div class="col-6 col-12-medium">
+												<p><b>Clarity of Learning Outcomes:</b> {{ page.setucolo }}</p>
+												<p><b>Clarity of Assessments:</b> {{ page.setucoa }}</p>
+												<p><b>Feedback:</b> {{ page.setufeedback }}</p>
+												<p><b>Resources:</b> {{ page.seturesources }}</p>
+												<p><b>Engagement:</b> {{ page.setuengagement }}</p>
+												<p><b>Satisfaction:</b> {{ page.setusatisfaction }}</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Subject content:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.description | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Classes:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.classes | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Textbooks:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.textbooks | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Assessments:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.assessments | markdownify }}
+											</div>
+										</div>
+									</li>
+									<li>
+										<h1>Comments</h1>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>General overview:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.generalcomments | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Lectures:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.lecturecomments | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Tutorials:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.tutorialcomments | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>In-semester assessments:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.assessmentcomments | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Exam:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.examcomments | markdownify }}
+											</div>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<b>Concluding remarks:</b>
+											</div>
+											<div class="col-6 col-12-medium">
+												{{ page.concludingcomments | markdownify }}
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</section>
+			</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
